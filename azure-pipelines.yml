@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-    vmImage: vm-devops
+    name: Default
 
 steps:
     - script: test.py
