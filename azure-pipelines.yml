@@ -10,20 +10,18 @@ name: $(Date:yyyyMMdd)$(Rev:.r)
 
 stages:
   - stage: TestPipelineDevops
-    displayname: "Test Pipeline devops with a simple python scprit"
+    displayName: "Test Pipeline devops with a simple python scprit"
     variables:
       - name: BuildURL
         value: $(System.TeamFoundationCollectionUri)$(System.TeamProject)/_build/results?buildId=$(Build.BuildId)
 
     jobs:
     - job: Test
-      displayName: 'Test the application'
-      pool:
-        name: Default
+      displayName: "Test the application"
+      pool: Default
 
-
-    steps:
-      - script: pip install -r requirements.txt
-        displayName: 'Install requirements'
-      - script: echo $(buildURL)
-      - script: python3 test.py
+      steps:
+        - script: pip install -r requirements.txt
+          displayName: 'Install requirements'
+        - script: echo $(buildURL)
+        - script: python3 test.py
