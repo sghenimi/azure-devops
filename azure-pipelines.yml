@@ -10,4 +10,4 @@ pool:
     name: Default
 
 steps:
-    - script: test.py
+    - script: python3 test.py
