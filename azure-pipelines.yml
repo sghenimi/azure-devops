@@ -21,6 +21,10 @@ stages:
       pool: Default
 
       steps:
+        - script: python3 -m venv venv --clear
+          displayName: Creating Python environment
+        - script: source venv/bin/activate
+          displayName: Sourcing Python environment
         - script: pip install -r requirements.txt
           displayName: 'Install requirements'
         - script: echo $(buildURL)
