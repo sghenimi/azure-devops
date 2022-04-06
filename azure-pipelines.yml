@@ -10,4 +10,6 @@ pool:
     name: Default
 
 steps:
-    - script: python3 test.py
+- script: pip install -r requirements.txt
+  displayName: 'Install requirements'
+- script: python3 test.py
