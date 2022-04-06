@@ -1,5 +1,6 @@
-
+from decouple import config
 def main():
-  print('test ok')
+  
+  print(f'Env={config(ENVIRONMENT)}')
 if __name__ == '__main__':
   main()
