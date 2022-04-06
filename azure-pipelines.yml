@@ -8,3 +8,6 @@ trigger:
 
 pool:
     name: vm-devops
+
+steps:
+    - script: test.py
