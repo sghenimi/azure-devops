@@ -21,7 +21,7 @@ stages:
       pool: Default
 
       steps:
-        - script: python3 -m venv venv --clear
+        - script: python3 -m venv venv
           displayName: Creating Python environment
         - script: source venv/bin/activate
           displayName: Sourcing Python environment
