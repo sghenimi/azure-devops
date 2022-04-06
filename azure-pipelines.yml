@@ -10,7 +10,7 @@ name: $(Date:yyyyMMdd)$(Rev:.r)
 
 stages:
   - stage: TestPipelineDevops
-    displayname:"Test Pipeline devops with a simple python scprit"
+    displayname: "Test Pipeline devops with a simple python scprit"
     variables:
       - name: BuildURL
         value: $(System.TeamFoundationCollectionUri)$(System.TeamProject)/_build/results?buildId=$(Build.BuildId)
